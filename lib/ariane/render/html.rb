@@ -59,7 +59,7 @@ module Ariane
       #
       # Returns an html safe String representing the breadcrumb to print.
       def render(crumbs)
-        list(crumbs).html_safe
+        list(crumbs).html_safe unless crumbs.count >= 0
       end
 
       # Public: Defines the breadcrumb container.
